@@ -1,7 +1,7 @@
 ﻿function RegionSort {
 
         Write-Host "==========================================================" -ForegroundColor DarkYellow
-        Write-Host " Oragnize and Region Sort " -ForegroundColor DarkYellow
+        Write-Host " Region Sort " -ForegroundColor DarkYellow
         Write-Host "==========================================================" -ForegroundColor DarkYellow
 
         # Enter ROM Path
@@ -264,7 +264,8 @@
         # Expected tags for NTSC-U
         $NARoms = dir $path | Where-Object { $_.Name -match "\(USA\)" -or $_.Name -match "\(USA, Europe, Brazil\)" -or $_.Name -match "\(USA, Asia\)" -or $_.Name -match "\(USA, Europe\)" -or` 
         $_.Name -match "\(USA, Korea\)" -or $_.Name -match "\(Japan, USA, Korea\)" -or $_.Name -match "\(USA, Europe, Korea\)" -or $_.Name -match "\(USA, Australia\)" -or $_.Name -match "\(USA, Brazil\)" -or` 
-        $_.Name -match "\(Japan, USA\)" -or $_.Name -match "\(World\)" -or $_.Name -match "\(Canada\)" -or $_.Name -match "\(Mexico\)" -or $_.Name -match "\(Unknown\)" -or $_.Name -match "\(USA, Japan\)" }
+        $_.Name -match "\(Japan, USA\)" -or $_.Name -match "\(World\)" -or $_.Name -match "\(Canada\)" -or $_.Name -match "\(Mexico\)" -or $_.Name -match "\(Unknown\)" -or $_.Name -match "\(USA, Japan\)" -or`
+        $_.Name -match "\(USA, Canada\)"}
 
         if($NARoms.exists){
 
