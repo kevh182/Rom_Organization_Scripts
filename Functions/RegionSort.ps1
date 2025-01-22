@@ -234,7 +234,7 @@
         $demoFolder = "$path\Demo"
 
         # Expected tags for Demo
-        $demoRoms = dir $path -file | Where-Object { $_.Name -match "\(Demo\)" }
+        $demoRoms = dir $path -file | Where-Object { $_.Name -match "\(Demo\)" -or $_.Name -match "\(Demo 1\)" -or $_.Name -match "\(Demo 2\)" -or $_.Name -match "\(Demo 3\)"}
 
         if($demoRoms.exists){
 
