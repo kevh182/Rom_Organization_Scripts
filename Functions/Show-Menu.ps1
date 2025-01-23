@@ -14,6 +14,7 @@
     Write-Host ""
     Write-Host “[1] - Region Sort Into Folders (NTSC-U, NTSC-J, PAL, etc)”
     Write-Host “[2] - Sort Files into Folders (0-9, A-Z)”
+    Write-Host "[3] - Create Folders from Filenames"
     Write-Host ""
     Write-Host "=========================================================="
     Write-Host "=========================================================="
