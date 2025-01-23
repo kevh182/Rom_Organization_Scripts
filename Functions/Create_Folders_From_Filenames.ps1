@@ -21,6 +21,8 @@
 
         New-Item -ItemType Directory -Path $folderPath -Force
 
+        Start-Sleep 1
+
         # Move the file into the corresponding folder
         Move-Item -Path $file.FullName -Destination $folderPath
 
