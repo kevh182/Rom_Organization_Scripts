@@ -1,6 +1,7 @@
 ﻿Import-Module ".\Functions\Show-Menu.ps1"
 Import-Module ".\Functions\RegionSort.ps1"
 Import-Module ".\Functions\SortFilesIntoFolders.ps1"
+Import-Module ".\Functions\Create_Folders_From_Filenames.ps1"
 
 do {
      Show-Menu
@@ -20,7 +21,10 @@ do {
 
                 SortFilesIntoFolders
                 
-           }‘q’ {
+           }‘3’ {
+
+                FoldersFromFiles
+           } ‘q’ {
 
                 return
            }
