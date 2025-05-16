@@ -293,7 +293,8 @@
         # Expected tags for NTSC-J
         $NTSCJRoms = dir $path | Where-Object { $_.Name -match "\(Japan\)" -or $_.Name -match "\(Japan, Brazil\)" -or $_.Name -match "\(Japan, Hong Kong\)" -or` 
         $_.Name -match "\(Japan, Europe, Brazil\)" -or $_.Name -match "\(Japan, USA, Brazil\)" -or $_.Name -match "\(Japan, Europe\)" -or $_.Name -match "\(Japan, Europe, Korea\)" -or` 
-        $_.Name -match "\(Japan, Korea\)" -or $_.Name -match "\(Asia\)" -or $_.Name -match "\(Korea\)" -or $_.Name -match "\(Hong Kong\)" -or $_.Name -match "\(China\)" -or $_.Name -match "\(Taiwan\)" }
+        $_.Name -match "\(Japan, Korea\)" -or $_.Name -match "\(Asia\)" -or $_.Name -match "\(Korea\)" -or $_.Name -match "\(Hong Kong\)" -or $_.Name -match "\(China\)" -or $_.Name -match "\(Taiwan\)" -or`
+        $_.Name -match "\((Japan, Asia)\)" }
 
         if($NTSCJRoms.exists){
 
