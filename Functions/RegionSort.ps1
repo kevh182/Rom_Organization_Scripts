@@ -324,7 +324,8 @@
         $_.Name -match "\(Germany\)" -or $_.Name -match "\(Poland\)" -or $_.Name -match "\(Belgium\)" -or $_.Name -match "\(United Kingdom\)" -or $_.Name -match "\(UK\)" -or $_.Name -match "\(Italy\)" -or`
         $_.Name -match "\(France\)" -or $_.Name -match "\(Spain\)" -or $_.Name -match "\(Sweden\)" -or $_.Name -match "\(Scandinavia\)" -or $_.Name -match "\(Netherlands\)" -or $_.Name -match "\(Russia\)" -or`
         $_.Name -match "\(Denmark\)" -or $_.Name -match "\(Greece\)" -or $_.Name -match "\(Australia\)" -or $_.Name -match "\(Brazil\)" -or $_.Name -match "\(Argentina\)" -or $_.Name -match "\(Portugal\)" -or`
-        $_.Name -match "\(Latin America\)" -or $_.Name -match "\(India\)" -or $_.Name -match "\(Switzerland\)" -or $_.Name -match "\(Austria\)" -or $_.Name -match "\(Turkey\)" -or $_.Name -match "\(Belgium, Netherlands\)"  }
+        $_.Name -match "\(Latin America\)" -or $_.Name -match "\(India\)" -or $_.Name -match "\(Switzerland\)" -or $_.Name -match "\(Austria\)" -or $_.Name -match "\(Turkey\)" -or $_.Name -match "\(Belgium, Netherlands\)" -or`
+        $_.Name -match "\(Austria, Switzerland\)" -or $_.Name -match "\(Finland\)"  }
 
             if($PALRoms.exists){
 
