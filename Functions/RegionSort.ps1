@@ -15,7 +15,7 @@
         $biosFolder = "$path\BIOS"
 
         # Expected tags for BIOS
-        $biosRoms = dir $path | Where-Object { $_.Name -match "\(BIOS\)" }
+        $biosRoms = dir $path | Where-Object { $_.Name -match "\S(?i)\bBIOS\b\S"}
 
             if($biosRoms.exists){
 
