@@ -42,7 +42,7 @@
         $betaFolder = "$path\Beta"
 
         # Expected tags for Beta
-        $betaRoms = dir $path | Where-Object { $_.Name -match "\(Beta\)" -or $_.Name -match "\(Beta 1\)" -or $_.Name -match "\(Beta 2\)" -or $_.Name -match "\(Beta 3\)" }
+        $betaRoms = dir $path | Where-Object { $_.Name -match "\(Beta\)" -or $_.Name -match "\(Beta \S\)" }
 
             if($betaRoms.exists){
 
@@ -125,7 +125,7 @@
         $PrototypeFolder = "$path\Prototype"
 
         # Expected tags for Prototype
-        $PrototypeRoms = dir $path | Where-Object { $_.Name -match "\(Prototype\)" -or $_.Name -match "\(Proto\)" -or $_.Name -match "\(Proto 1\)" -or $_.Name -match "\(Proto 2\)"}
+        $PrototypeRoms = dir $path | Where-Object { $_.Name -match "\(Prototype\)" -or $_.Name -match "\(Proto\)" -or $_.Name -match "\(Proto \S\)"}
 
             if($PrototypeRoms.exists){
 
@@ -234,7 +234,7 @@
         $demoFolder = "$path\Demo"
 
         # Expected tags for Demo
-        $demoRoms = dir $path -file | Where-Object { $_.Name -match "\(Demo\)" -or $_.Name -match "\(Demo 1\)" -or $_.Name -match "\(Demo 2\)" -or $_.Name -match "\(Demo 3\)"}
+        $demoRoms = dir $path -file | Where-Object { $_.Name -match "\(Demo\)" -or $_.Name -match "\(Demo \S\)"}
 
         if($demoRoms.exists){
 
