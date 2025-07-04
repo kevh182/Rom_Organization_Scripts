@@ -265,7 +265,7 @@
         $NARoms = dir $path | Where-Object { $_.Name -match "\(USA\)" -or $_.Name -match "\(USA, Europe, Brazil\)" -or $_.Name -match "\(USA, Asia\)" -or $_.Name -match "\(USA, Europe\)" -or` 
         $_.Name -match "\(USA, Korea\)" -or $_.Name -match "\(Japan, USA, Korea\)" -or $_.Name -match "\(USA, Europe, Korea\)" -or $_.Name -match "\(USA, Australia\)" -or $_.Name -match "\(USA, Brazil\)" -or` 
         $_.Name -match "\(Japan, USA\)" -or $_.Name -match "\(World\)" -or $_.Name -match "\(Canada\)" -or $_.Name -match "\(Mexico\)" -or $_.Name -match "\(Unknown\)" -or $_.Name -match "\(USA, Japan\)" -or`
-        $_.Name -match "\(USA, Canada\)"}
+        $_.Name -match "\(USA, Canada\)" -or $_.Name -match "\(USA, Germany\)"}
 
         if($NARoms.exists){
 
@@ -325,7 +325,7 @@
         $_.Name -match "\(France\)" -or $_.Name -match "\(Spain\)" -or $_.Name -match "\(Sweden\)" -or $_.Name -match "\(Scandinavia\)" -or $_.Name -match "\(Netherlands\)" -or $_.Name -match "\(Russia\)" -or`
         $_.Name -match "\(Denmark\)" -or $_.Name -match "\(Greece\)" -or $_.Name -match "\(Australia\)" -or $_.Name -match "\(Brazil\)" -or $_.Name -match "\(Argentina\)" -or $_.Name -match "\(Portugal\)" -or`
         $_.Name -match "\(Latin America\)" -or $_.Name -match "\(India\)" -or $_.Name -match "\(Switzerland\)" -or $_.Name -match "\(Austria\)" -or $_.Name -match "\(Turkey\)" -or $_.Name -match "\(Belgium, Netherlands\)" -or`
-        $_.Name -match "\(Austria, Switzerland\)" -or $_.Name -match "\(Finland\)" -or $_.Name -match "\(Norway\)" -or $_.Name -match "\(UK, Australia\)" -or $_.Name -match "\(South Africa\)"}
+        $_.Name -match "\(Austria, Switzerland\)" -or $_.Name -match "\(Finland\)" -or $_.Name -match "\(Norway\)" -or $_.Name -match "\(UK, Australia\)" -or $_.Name -match "\(South Africa\)" -or $_.Name -match "\(Europe, Germany\)"}
 
             if($PALRoms.exists){
 
