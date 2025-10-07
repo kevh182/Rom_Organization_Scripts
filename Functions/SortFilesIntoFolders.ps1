@@ -3,7 +3,7 @@
     $ErrorActionPreference = "SilentlyContinue"
 
             Write-Host "==========================================================" -ForegroundColor DarkYellow
-            Write-Host " Sort Files Into Folders (0-9, A-Z) " -ForegroundColor DarkYellow
+            Write-Host " Sort Files Into Folders (# - Z) " -ForegroundColor DarkYellow
             Write-Host "==========================================================" -ForegroundColor DarkYellow
 
             # Set the source folder path
@@ -22,7 +22,7 @@
                         # Determine the destination folder based on the first character
                         if ($firstCharacter -match "[0-9]") {
 
-                            $destinationPath = Join-Path $sourceFolder "0-9"
+                            $destinationPath = Join-Path $sourceFolder "#"
 
                         } else {
 
