@@ -37,6 +37,34 @@
 
             }
 
+    # Demo Rom Folder
+
+        $demoFolder = "$path\Demo"
+
+        # Expected tags for Demo
+        $demoRoms = dir $path -file | Where-Object { $_.Name -match "\(Demo\)" -or $_.Name -match "\(Demo \S\)" -or $_.Name -match "\(\S\ Demo)" }
+
+        if($demoRoms.exists){
+
+
+            if(!(Test-Path $demoFolder)){
+
+                Write-Host "Demo Roms Found" -ForegroundColor DarkGreen
+
+                # Create Demo folder
+                Write-Host "Creating Demo Directory" -ForegroundColor DarkGreen
+
+                New-Item -Path $path -Name "Demo" -ItemType "directory"
+
+            }
+
+                
+            # Move Demo Roms to Demo folder
+            Write-Host "Moving Demo Roms to Demo folder"
+            $demoRoms | Move-Item -Destination $demoFolder -Force
+
+        }
+
     # Beta Rom Folder
 
         $betaFolder = "$path\Beta"
@@ -229,34 +257,6 @@
 
         }
 
-    # Demo Rom Folder
-
-        $demoFolder = "$path\Demo"
-
-        # Expected tags for Demo
-        $demoRoms = dir $path -file | Where-Object { $_.Name -match "\(Demo\)" -or $_.Name -match "\(Demo \S\)"}
-
-        if($demoRoms.exists){
-
-
-            if(!(Test-Path $demoFolder)){
-
-                Write-Host "Demo Roms Found" -ForegroundColor DarkGreen
-
-                # Create Demo folder
-                Write-Host "Creating Demo Directory" -ForegroundColor DarkGreen
-
-                New-Item -Path $path -Name "Demo" -ItemType "directory"
-
-            }
-
-                
-            # Move Demo Roms to Demo folder
-            Write-Host "Moving Demo Roms to Demo folder"
-            $demoRoms | Move-Item -Destination $demoFolder -Force
-
-        }
-
     # NTSC-U Rom Folder
 
         $NAFolder = "$path\NTSC-U"
@@ -326,7 +326,7 @@
         $_.Name -match "\(Denmark\)" -or $_.Name -match "\(Greece\)" -or $_.Name -match "\(Australia\)" -or $_.Name -match "\(Brazil\)" -or $_.Name -match "\(Argentina\)" -or $_.Name -match "\(Portugal\)" -or`
         $_.Name -match "\(Latin America\)" -or $_.Name -match "\(India\)" -or $_.Name -match "\(Switzerland\)" -or $_.Name -match "\(Austria\)" -or $_.Name -match "\(Turkey\)" -or $_.Name -match "\(Belgium, Netherlands\)" -or`
         $_.Name -match "\(Austria, Switzerland\)" -or $_.Name -match "\(Finland\)" -or $_.Name -match "\(Norway\)" -or $_.Name -match "\(UK, Australia\)" -or $_.Name -match "\(South Africa\)" -or $_.Name -match "\(Europe, Germany\)" -or`
-        $_.Name -match "\(Export\)"}
+        $_.Name -match "\(Export\)" -or $_.Name -match "\(France, Spain\)"}
 
             if($PALRoms.exists){
 
